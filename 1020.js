@@ -19,7 +19,17 @@ let lines = conteudoArquivo.split(quebraLinhaWindows);
 
 ///////////////////////COLAR NO BEECROWD O CODIGO DESTE PONTO EM DIANTE///////////////////
 //para ler linhas com mais de um valor na mesma linha use o comando a seguir
-let [var1, var2, var3, var4] = lines.shift().split(" "); 
+// let [var1, var2, var3, var4] = lines.shift().split(" "); 
 
 //para ler linhas com um unico valor na mesma linha use o comando a seguir
-let notaExame = lines.shift();   
+
+let idade = parseInt(lines.shift());   
+
+const anos = parseInt(idade / 365);
+const meses = parseInt((idade % 365) / 30);
+const dias = (idade % 365) % 30;
+
+console.log(`${anos} ano(s)`);  
+console.log(`${meses} mes(es)`);
+console.log(`${dias} dia(s)`);
+

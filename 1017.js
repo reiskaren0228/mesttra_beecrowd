@@ -19,7 +19,14 @@ let lines = conteudoArquivo.split(quebraLinhaWindows);
 
 ///////////////////////COLAR NO BEECROWD O CODIGO DESTE PONTO EM DIANTE///////////////////
 //para ler linhas com mais de um valor na mesma linha use o comando a seguir
-let [var1, var2, var3, var4] = lines.shift().split(" "); 
+// let [var1, var2, var3, var4] = lines.shift().split(" "); 
 
 //para ler linhas com um unico valor na mesma linha use o comando a seguir
-let notaExame = lines.shift();   
+let tempo = parseInt(lines.shift());
+let km_L = parseInt(lines.shift());
+
+automovel = 12;
+
+qtdL = ((tempo * km_L)/ automovel).toFixed(3);
+
+console.log(`${qtdL}`);

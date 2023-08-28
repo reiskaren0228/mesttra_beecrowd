@@ -19,7 +19,17 @@ let lines = conteudoArquivo.split(quebraLinhaWindows);
 
 ///////////////////////COLAR NO BEECROWD O CODIGO DESTE PONTO EM DIANTE///////////////////
 //para ler linhas com mais de um valor na mesma linha use o comando a seguir
-let [var1, var2, var3, var4] = lines.shift().split(" "); 
+let [valor] = lines.shift().split(" "); 
 
 //para ler linhas com um unico valor na mesma linha use o comando a seguir
-let notaExame = lines.shift();   
+// let N = lines.shift();   
+
+const notas = [100, 50, 20, 10, 5, 2, 1];
+
+for (let nota of notas) {
+    const quantidadeNotas = Math.floor(valor / nota);
+    console.log(`${quantidadeNotas} nota(s) de R$ ${nota},00`);
+    valor %= nota; 
+}
+
+console.log(valor); 
